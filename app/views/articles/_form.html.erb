@@ -7,6 +7,14 @@
     <% end %>
   </div>
 
+<div>
+    <%= form.label :slug %><br>
+    <%= form.text_field :slug %>
+    <%= article.errors.full_messages_for(:slug).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %><br>
